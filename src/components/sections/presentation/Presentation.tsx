@@ -62,7 +62,6 @@ const Presentation = () => {
             x: 0,
             transition: {
                 duration: 0.8,
-                ease: "easeOut",
             },
         },
     }
@@ -78,7 +77,6 @@ const Presentation = () => {
             x: 0,
             transition: {
                 duration: 0.8,
-                ease: "easeOut",
             },
         },
     }
@@ -94,7 +92,6 @@ const Presentation = () => {
             y: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut",
             },
         },
     }
@@ -123,23 +120,23 @@ const Presentation = () => {
             y: 0,
             transition: {
                 duration: 0.5,
-                ease: "easeOut",
             },
         },
     }
 
     return (
         <motion.div
-            className="flex items-center w-full max-w-7xl mx-auto justify-between h-dvh gap-16"
+            id="aboutme"
+            className="flex items-center w-full max-xl:px-6 xl:max-w-7xl mx-auto lg:justify-between h-dvh max-lg:flex-col"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
         >
             {/* Sección izquierda - Información personal */}
-            <motion.div className="w-1/2 max-w-4xl flex flex-col gap-4 h-96 justify-between" variants={slideInLeft}>
+            <motion.div className="lg:w-1/2 w-full flex flex-col gap-4 h-96 lg:justify-between justify-center max-lg:items-center" variants={slideInLeft}>
                 <div>
                 <motion.h1
-                    className="text-7xl"
+                    className="lg:text-7xl text-5xl max-lg:text-center"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -148,7 +145,7 @@ const Presentation = () => {
                 </motion.h1>
 
                 <motion.p
-                    className="text-5xl text-foreground/60"
+                    className="text-5xl text-foreground/60 max-lg:text-center"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -165,11 +162,11 @@ const Presentation = () => {
                 </motion.p>
                 </div>
 
-                <motion.div className="flex flex-col gap-2" variants={slideInUp} transition={{ delay: 0.8 }}>
-                    <p className="text-lg text-foreground/60">
+                <motion.div className="flex flex-col gap-2 max-lg:text-center" variants={slideInUp} transition={{ delay: 0.8 }}>
+                    <p className="lg:text-lg text-foreground/60 max-w-lg">
                         I build beautiful, functional web experiences that turn ideas into reality. With 2 years of experience and a passion for clean design, I'm always learning and pushing creative boundaries. <br />
                     </p>
-                    <div className="flex items-center gap-2 text-foreground/60 text-sm border hover:border-orange-400 rounded-full px-4 py-1 w-fit">
+                    <div className="hidden lg:flex items-center gap-2 text-foreground/60 text-sm border hover:border-orange-400 rounded-full px-4 py-1 w-fit">
                         <Ripple />
                         Currently studying Systems Engineering.
                     </div>
@@ -185,7 +182,7 @@ const Presentation = () => {
             </motion.div>
 
             {/* Sección derecha - Tarjetas */}
-            <motion.div className="flex flex-col gap-4 w-1/2 h-96" variants={slideInRight}>
+            <motion.div className="lg:flex flex-col gap-4 lg:w-1/2 h-96 w-full hidden" variants={slideInRight}>
                 {/* Fila superior */}
                 <motion.div
                     className="flex items-center gap-4 w-full h-full"
@@ -204,7 +201,7 @@ const Presentation = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                        <h2 className="text-2xl">Checkout my latest experiences</h2>
+                        <h2 className="text-xl mb-2">My recent experiences</h2>
                         <MarqueeDemo />
                     </motion.div>
 
