@@ -1,46 +1,30 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
+import diarc from '../../../assets/diarc.svg'
+import tualo from '../../../assets/tualo.svg'
+import yacobian from '../../../assets/yacobian.svg'
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Diarc Studio",
+    username: "@diarcstudio",
+    body: "I developed their SPA and content manager with NextJs.",
+    img: diarc,
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Tualo",
+    username: "@tualomx",
+    body: "Work as a fullstack developer remotely for a year.",
+    img: tualo,
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
+    name: "Yacobian",
+    username: "@yacobian.es",
+    body: "I developed their Website and content manager with NextJs.",
+    img: yacobian,
+  }
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
 
 const ReviewCard = ({
   img,
@@ -64,7 +48,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -81,7 +65,7 @@ export default function MarqueeDemo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
+        {reviews.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
