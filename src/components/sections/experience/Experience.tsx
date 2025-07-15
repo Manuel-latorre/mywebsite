@@ -1,73 +1,119 @@
-import { Timeline } from '@/components/ui/timeline'
-import React from 'react'
+import Avatar from "@/components/ui/avatar";
+import { Timeline } from "@/components/ui/timeline";
+import { igz, igzl, martin, martinl } from "@/lib/utils";
+import tualo from "../../../assets/tualo.svg";
+import yacobian from "../../../assets/yacobian.svg";
 
 const Experience = () => {
   const experienceData = [
     {
-      title: "Mayo 2025 - Actual",
+      title: "May 2025 - Current",
       content: (
         <div>
-          <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-2">
-            Freelancer
-          </h4>
+          <div className="flex items-center gap-3">
+            <h4 className="text-2xl text-neutral-800 dark:text-neutral-200">
+              Freelancer team
+            </h4>
+            <div className="flex items-center">
+              <Avatar
+                url={igz}
+                name="Ignacio Zanotto"
+                role="Project Manager"
+                linkedin={igzl}
+              />
+              <div className="-translate-x-2">
+                <Avatar
+                  url={martin}
+                  name="Martín Alturria"
+                  role="Backend Developer"
+                  linkedin={martinl}
+                />
+              </div>
+            </div>
+            <h4 className="text-2xl text-neutral-800 dark:text-neutral-200">
+              |
+            </h4>
+            <h4 className="text-2xl bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">
+              Frontend Developer
+            </h4>
+          </div>
           <p className="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">
-            Sistema para empresa dedicado al sector inmobiliario
+            System for a company dedicated to the real estate sector
           </p>
           <ul className="text-neutral-700 dark:text-neutral-300 space-y-2 mb-4">
-            <li>• Stepper de 4 etapas con Zustand, validación con React Hook Form + Zod, rutas protegidas por roles y persistencia de estado.</li>
-            <li>• Diversos flujos incluso implementando optimistic updates con React Query.</li>
-            <li>• Dashboard con Recharts, filtros dinámicos persistentes por fecha/moneda, manejo de estados UI y validación de rangos de fechas.</li>
+            <p>Principal features</p>
+            <li>
+              4-stage stepper with Zustand, validation with React Hook Form +
+              Zod, role-protected routes, and state persistence.
+            </li>
+            <li>
+              Various flows, including implementing optimistic updates with
+              React Query.
+            </li>
+            <li>
+              Dashboard with Recharts, persistent dynamic filters by
+              date/currency, UI state management, and date range validation.
+            </li>
           </ul>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">React</span>
-            <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">Tailwind CSS</span>
-            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Zustand</span>
-            <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">React Query</span>
-          </div>
+          <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,typescript,react" />
         </div>
       ),
     },
     {
-      title: "Marzo 2025",
+      title: "March 2025",
       content: (
         <div>
-          <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-2">
-            Yacobian - Freelancer
+          <div className="flex items-center gap-3 mb-2">
+          <img src={yacobian} alt="Yacobian" className="w-8 h-8"/>
+          <h4 className="text-3xl text-neutral-800 dark:text-neutral-200">
+            Yacobian - Freelancer | <span className="bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">Frontend Developer</span>
           </h4>
+          </div>
           <p className="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">
-            Empresa de España dedicada al sector inmobiliario
+            Company in Spain dedicated to the real estate sector
           </p>
           <ul className="text-neutral-700 dark:text-neutral-300 space-y-2 mb-4">
-            <li>• Desarrollo end-to-end de aplicación web mobile-first desde prototipos de Figma.</li>
-            <li>• Dashboard personalizado, ofreciendo flexibilidad y autonomía al cliente en la gestión de contenido mediante operaciones CRUD.</li>
+            <p>Principal features</p>
+            <li>
+              Development of a mobile-first web application from Figma
+              prototypes.
+            </li>
+            <li>
+              Custom dashboard, offering flexibility and autonomy to the client
+              in managing content through CRUD operations.
+            </li>
           </ul>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">React</span>
-            <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">Next.js</span>
-            <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">Tailwind CSS</span>
-          </div>
+          <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,typescript,react,supabase" />
         </div>
       ),
     },
     {
-      title: "Abril 2024 - Feb 2025",
+      title: "April 2024 - Feb 2025",
       content: (
         <div>
-          <h4 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-2">
-            Tualo - Desarrollador Fullstack
+          <div className="flex items-center gap-3 mb-2">
+          <img src={tualo} alt="Tualo" className="w-8 h-8"/>
+          <h4 className="text-3xl text-neutral-800 dark:text-neutral-200">
+            Tualo - <span className="bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">Fullstack Developer</span>
           </h4>
+          </div>
           <p className="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-4">
-            Empresa de México dedicada a gestionar finanzas
+            Company in Mexico dedicated to managing finances
           </p>
           <ul className="text-neutral-700 dark:text-neutral-300 space-y-2 mb-4">
-            <li>• Desarrollo end-to-end de aplicación web mobile-first desde prototipos de Figma.</li>
-            <li>• Dashboard personalizado, ofreciendo flexibilidad y autonomía al cliente en la gestión de contenido mediante operaciones CRUD.</li>
+            <p>Principal features</p>
+            <li>
+              Automated reports using Artificial Intelligence (OpenAI API),
+              reducing manual work by 80% and optimizing operational processes
+            </li>
+            <li>
+              Integrated APIs Trigger.dev for
+              workflow automation, and RESEND for transactional emails.
+            </li>
+            <li>Created dynamic charts (Recharts) from Excel files.</li>
           </ul>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">React</span>
-            <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">Next.js</span>
-            <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">Tailwind CSS</span>
-          </div>
+          <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,typescript,react,supabase" />
+
         </div>
       ),
     },
@@ -80,7 +126,7 @@ const Experience = () => {
     >
       <Timeline data={experienceData} />
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
