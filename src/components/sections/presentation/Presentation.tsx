@@ -1,12 +1,7 @@
 import { motion } from "framer-motion"
-import React from "@/components/icons/ReactIcon"
+import { containerVariants, slideInLeft, slideInRight, slideInUp, stackContainerVariants, stackItemVariants } from "@/lib/utils"
 import perfil from "../../../assets/perfil-profesional.png"
 import SocialButton from "./SocialButton"
-import Nextjs from "@/components/icons/NextIcon"
-import TailwindCSS from "@/components/icons/TailwindIcon"
-import TypeScript from "@/components/icons/TypescriptIcon"
-import ReactQuery from "@/components/icons/ReactQueryIcon"
-import FramerMotion from "@/components/icons/FramerMotion"
 import ContactButton from "@/components/buttons/ContactButton"
 import MarqueeDemo from "./MarqueeProyects"
 import Ripple from "@/components/ui/ripple"
@@ -15,119 +10,36 @@ const Presentation = () => {
     const mainStack = [
         {
             name: "React",
-            icon: <React />,
+            icon: <img src="https://skillicons.dev/icons?i=react" />,
         },
         {
             name: "Next.js",
-            icon: <Nextjs />,
+            icon: <img src="https://skillicons.dev/icons?i=nextjs" />,
         },
         {
             name: "Tailwind CSS",
-            icon: <TailwindCSS />,
+            icon: <img src="https://skillicons.dev/icons?i=tailwindcss" />,
         },
         {
             name: "TypeScript",
-            icon: <TypeScript />,
+            icon: <img src="https://skillicons.dev/icons?i=typescript" />,
         },
         {
-            name: "React Query",
-            icon: <ReactQuery />,
+            name: "HTML",
+            icon: <img src="https://skillicons.dev/icons?i=html" />,
         },
         {
-            name: "Framer Motion",
-            icon: <FramerMotion />,
+            name: "CSS",
+            icon: <img src="https://skillicons.dev/icons?i=css" />,
         },
     ]
 
-    // Variantes de animación para el contenedor principal
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                staggerChildren: 0.2,
-            },
-        },
-    }
-
-    // Variantes para elementos que entran desde la izquierda
-    const slideInLeft = {
-        hidden: {
-            opacity: 0,
-            x: -60,
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.8,
-            },
-        },
-    }
-
-    // Variantes para elementos que entran desde la derecha
-    const slideInRight = {
-        hidden: {
-            opacity: 0,
-            x: 60,
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                duration: 0.8,
-            },
-        },
-    }
-
-    // Variantes para elementos que entran desde abajo
-    const slideInUp = {
-        hidden: {
-            opacity: 0,
-            y: 40,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-            },
-        },
-    }
-
-    // Variantes para el stack de tecnologías
-    const stackContainerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3,
-            },
-        },
-    }
-
-    const stackItemVariants = {
-        hidden: {
-            opacity: 0,
-            scale: 0.8,
-            y: 20,
-        },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            transition: {
-                duration: 0.5,
-            },
-        },
-    }
+    
 
     return (
         <motion.div
             id="aboutme"
-            className="flex items-center w-full max-xl:px-6 xl:max-w-7xl mx-auto lg:justify-between h-dvh max-lg:flex-col"
+            className="flex items-center w-full max-xl:px-6 xl:max-w-7xl mx-auto lg:justify-between lg:h-dvh max-lg:flex-col"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -136,7 +48,7 @@ const Presentation = () => {
             <motion.div className="lg:w-1/2 w-full flex flex-col gap-4 h-96 lg:justify-between justify-center max-lg:items-center" variants={slideInLeft}>
                 <div>
                 <motion.h1
-                    className="lg:text-7xl text-5xl max-lg:text-center"
+                    className="title"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -201,7 +113,7 @@ const Presentation = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
                     >
-                        <h2 className="text-xl mb-2">My recent experiences</h2>
+                        <h2 className="text-xl mb-2">My experience</h2>
                         <MarqueeDemo />
                     </motion.div>
 
