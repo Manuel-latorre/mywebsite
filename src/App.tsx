@@ -4,10 +4,13 @@ import Presentation from "./components/sections/presentation/Presentation";
 import { BackgroundLines } from "./components/ui/background-lines";
 import Experience from "./components/sections/experience/Experience";
 import Skills from "./components/sections/skills/Skills";
+import ContactForm from "./components/sections/contact/ContactForm";
+import { Toaster } from "@/components/ui/sonner"
 
 function App() {
   return (
     <ThemeProvider>
+      <Toaster />
       <BackgroundLines>
         <div className="min-h-dvh w-full bg-background text-foreground transition-colors duration-300">
           <Navbar />
@@ -22,14 +25,7 @@ function App() {
             id="contact"
             className="min-h-dvh w-full flex items-center justify-center"
           >
-            <div className="text-center">
-              <h2 className="text-6xl font-bold mb-4 bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">
-                Contact
-              </h2>
-              <p className="text-xl text-foreground/60">
-                This section is coming soon...
-              </p>
-            </div>
+            <ContactForm />
           </section>
         </div>
       </BackgroundLines>
