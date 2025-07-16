@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 
 const ContactButton = () => {
     return (
-            <button
+            <a href="#contact"
                 className={cn(
                     "group/start relative w-full",
                     "flex items-center justify-between",
@@ -29,7 +29,7 @@ const ContactButton = () => {
                     />
                     <ArrowRight className="relative z-10 w-4 h-4 text-orange-500 transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110" />
                 </div>
-            </button>
+            </a>
     )
 }
 
