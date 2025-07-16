@@ -1,19 +1,8 @@
-"use client";
-
-/**
- * @author: @dorian_baffier
- * @description: Social Button
- * @version: 1.0.0
- * @date: 2025-06-26
- * @license: MIT
- * @website: https://kokonutui.com
- * @github: https://github.com/kokonut-labs/kokonutui
- */
-
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { Twitter, Instagram, Linkedin, Link, GithubIcon } from "lucide-react";
 import { motion } from "motion/react";
+import GithubIcon from "@/components/icons/GithubIcon";
+import LinkedInIcon from "@/components/icons/LinkedinIcon";
 
 interface SocialButtonProps {
     className?: string;
@@ -22,68 +11,80 @@ interface SocialButtonProps {
 export default function SocialButton({
     className,
 }: SocialButtonProps) {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-    const shareButtons = [
-        { icon: GithubIcon, label: "Github" },
-        { icon: Instagram, label: "Instagram" },
-        { icon: Linkedin, label: "Linkedin" },
-        { icon: Link, label: "Copy link" },
+    const socialLinks = [
+        { 
+            icon: <GithubIcon width={24} height={24}/>, 
+            label: "Github", 
+            href: "https://github.com/manuel-latorre",
+            color: "",
+            hoverColor: ""
+        },
+     
+        { 
+            icon: <LinkedInIcon width={24} height={24}/>, 
+            label: "LinkedIn", 
+            href: "https://www.linkedin.com/in/manuel-latorre-frontend-developer/",
+            color: "hover:bg-blue-600",
+            hoverColor: "group-hover:text-white"
+        },
     ];
 
-    const handleShare = (index: number) => {
-        setActiveIndex(index);
-        setTimeout(() => setActiveIndex(null), 300);
-    };
-
     return (
-        <div className="flex h-10 overflow-hidden">
-            {shareButtons.map((button, i) => (
-                <motion.button
-                    type="button"
-                    key={`share-${button.label}`}
-                    aria-label={button.label}
-                    onClick={() => handleShare(i)}
+        <div className="flex items-center gap-2">
+            {socialLinks.map((social, index) => (
+                <motion.a
+                    key={`social-${social.label}`}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${social.label} profile`}
                     className={cn(
-                        "h-10",
-                        "w-10",
-                        "flex items-center justify-center",
-                        "bg-black dark:bg-white",
-                        "text-white dark:text-black",
-                        i === 0 && "rounded-l-md",
-                        i === 3 && "rounded-r-md",
-                        "border-r border-white/10 dark:border-black/10 last:border-r-0",
-                        "hover:bg-gray-900 dark:hover:bg-gray-100",
-                        "outline-none",
-                        "relative overflow-hidden",
-                        "transition-colors duration-200",
+                        "group relative flex items-center justify-center",
+                        "w-12 h-12 rounded-xl",
+                        "bg-gray-100 dark:bg-zinc-900",
+                        "border border-gray-200 dark:border-zinc-700",
+                        "transition-all duration-300 ease-out",
+                        "hover:scale-110 hover:shadow-lg",
+                        "hover:border-transparent",
+                        social.color,
                         className
                     )}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.95 }}
                 >
                     <motion.div
-                        className="relative z-10"
+                        className={cn(
+                            "relative z-10 transition-colors duration-300",
+                            "text-gray-600 dark:text-gray-300",
+                            social.hoverColor
+                        )}
                         animate={{
-                            scale: activeIndex === i ? 0.85 : 1,
+                            scale: hoveredIndex === index ? 1.1 : 1,
                         }}
                         transition={{
                             duration: 0.2,
-                            ease: "easeInOut",
+                            ease: "easeOut",
                         }}
                     >
-                        <button.icon className="w-4 h-4" />
+                        {social.icon}
                     </motion.div>
+                    
+                    {/* Hover effect overlay */}
                     <motion.div
-                        className="absolute inset-0 bg-white dark:bg-black"
-                        initial={{ opacity: 0 }}
-                        animate={{
-                            opacity: activeIndex === i ? 0.15 : 0,
-                        }}
-                        transition={{
-                            duration: 0.2,
-                            ease: "easeInOut",
+                        className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{
+                            background: hoveredIndex === index 
+                                ? "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)"
+                                : "transparent"
                         }}
                     />
-                </motion.button>
+
+                    
+                </motion.a>
             ))}
         </div>
     );
