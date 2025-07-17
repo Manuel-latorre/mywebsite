@@ -20,7 +20,8 @@ export const translations = {
         myExperience: "My experience",
         lets: "Let's",
         bringIt: "Bring it",
-        toLife: "To life"
+        toLife: "To life",
+        resumeButton: "Check out my resume"
       },
     
     // Experience Section
@@ -128,6 +129,13 @@ export const translations = {
     // Timeline
     timeline: {
       experience: "Experience"
+    },
+
+    // Footer
+    footer: {
+      description: "Transforming complex ideas into intuitive and scalable digital experiences.",
+      quickLinks: "Quick Links",
+      copyright: "Manuel Latorre."
     }
   },
   es: {
@@ -149,7 +157,8 @@ export const translations = {
         myExperience: "Mi experiencia",
         lets: "Let's",
         bringIt: "Bring it",
-        toLife: "To life"
+        toLife: "To life",
+        resumeButton: "Echa un vistazo a mi CV"
       },
     
     // Experience Section
@@ -257,6 +266,13 @@ export const translations = {
     // Timeline
     timeline: {
       experience: "Experiencia"
+    },
+
+    // Footer
+    footer: {
+      description: "Transformando ideas complejas en experiencias digitales intuitivas y escalables.",
+      quickLinks: "Enlaces Rápidos",
+      copyright: "Manuel Latorre."
     }
   }
 };
