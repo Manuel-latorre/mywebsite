@@ -9,7 +9,7 @@ import {
 } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
-import perfil from "../../../assets/perfil-profesional.png";
+import perfil from "../../../assets/perfil-profesional.jpg";
 import SocialButton from "../../buttons/SocialButton";
 import ContactButton from "@/components/buttons/ContactButton";
 import MarqueeDemo from "./MarqueeProyects";
