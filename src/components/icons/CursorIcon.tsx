@@ -1,4 +1,4 @@
-import * as React from "react";import type { SVGProps } from "react";
+import type { SVGProps } from "react";
 const Cursor = (props: SVGProps<SVGSVGElement>) => (
   <div className="p-1.5 rounded-xl bg-[#242938]">
   <svg
