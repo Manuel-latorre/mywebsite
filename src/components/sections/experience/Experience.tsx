@@ -45,7 +45,7 @@ const Experience = () => {
             <h4 className="lg:block hidden text-3xl text-neutral-800 dark:text-neutral-200">
               |
             </h4>
-            <h4 className="max-lg:mb-2 max-sm:text-xl text-3xl bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">
+            <h4 className="max-lg:mb-2 max-sm:text-xl text-3xl textgradient">
               {t.experience.frontendDeveloper}
             </h4>
           </div>
@@ -86,7 +86,7 @@ const Experience = () => {
                 <span>{t.experience.freelancer}</span>
                 <span className="xl:block hidden">|</span>
               </div>
-              <span className="bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">
+              <span className="textgradient">
                 {t.experience.frontendDeveloper}
               </span>
             </div>
@@ -120,7 +120,7 @@ const Experience = () => {
                 Tualo
               </Link>{" "}
               <span className="lg:block hidden">|</span>
-              <span className="bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">
+              <span className="textgradient">
                 {t.experience.fullstackDeveloper}
               </span>
             </div>
@@ -161,7 +161,7 @@ const Experience = () => {
                 Diarc Studio
               </Link>{" "}
               <span className="lg:block hidden">|</span>
-              <span className="bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent">
+              <span className="textgradient">
                 {t.experience.fullstackDeveloper}
               </span>
             </div>
