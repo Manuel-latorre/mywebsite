@@ -12,21 +12,21 @@ export const martin = "https://media.licdn.com/dms/image/v2/D4D03AQFKaJYhEC8p8w/
 export const martinl= "https://www.linkedin.com/in/martin-alturria/"
 
 
-export const links = [
+export const getLinks = (t: any) => [
     {
-        name: "About me",
+        name: t.nav.aboutMe,
         href: "#aboutme"
     },
     {
-        name: "Experience",
+        name: t.nav.experience,
         href: "#experience"
     },
     {
-        name: "Skills",
+        name: t.nav.skills,
         href: "#skills"
     },
     {
-        name: "Contact",
+        name: t.nav.contact,
         href: "#contact"
     }
 ]
@@ -117,3 +117,23 @@ export const stackItemVariants = {
     },
 }
 
+
+
+export const mobileLinks = (t: any) => [
+    {
+        name: t.nav.aboutMe,
+        href: "#aboutme"
+    },
+    {
+        name: t.nav.experience,
+        href: "#experience"
+    },
+    {
+        name: t.nav.skills,
+        href: "#skills"
+    },
+    {
+        name: t.nav.contact,
+        href: "#contact"
+    }
+]
