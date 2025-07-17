@@ -176,3 +176,7 @@ html {
 .title{
   @apply lg:text-7xl text-5xl max-lg:text-center;
 }
+
+.textgradient{
+  @apply bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent;
+}
