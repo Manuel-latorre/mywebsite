@@ -94,7 +94,7 @@ const Navbar = () => {
               key={link.name}
               className={`font-medium transition-colors duration-300 ${
                 isActive
-                  ? "bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent"
+                  ? "textgradient"
                   : "text-foreground/60 hover:bg-gradient-to-r hover:from-[#C75305] hover:via-[#FE9400] hover:to-[#E34401] hover:bg-clip-text hover:text-transparent"
               }`}
               onClick={(e) => handleLinkClick(e, link.href)}
@@ -108,7 +108,7 @@ const Navbar = () => {
       <div className="flex items-center gap-2">
         <a
           href="#contact"
-          className="lg:block hidden px-4 py-1 cursor-pointer rounded-full border border-orange-400 bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent"
+          className="lg:block hidden px-4 py-1 cursor-pointer rounded-full border border-orange-400 textgradient"
         >
           {t.nav.letsTalk}
         </a>
