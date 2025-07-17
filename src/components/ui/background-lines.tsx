@@ -16,12 +16,16 @@ export const BackgroundLines = ({
   return (
     <div
       className={cn(
-        "h-[20rem] md:h-screen w-full bg-white dark:bg-black",
+        "relative min-h-screen w-full bg-white dark:bg-black",
         className
       )}
     >
-      <SVG svgOptions={svgOptions} />
-      {children}
+      <div className="fixed inset-0 w-full h-full z-0">
+        <SVG svgOptions={svgOptions} />
+      </div>
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 };
