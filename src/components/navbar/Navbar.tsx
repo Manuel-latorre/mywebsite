@@ -1,9 +1,14 @@
-import { links } from "@/lib/utils";
+import { getLinks } from "@/lib/utils";
 import { ThemeToggle } from "../ThemeToggle";
-import { InboxIcon, Phone, PhoneCallIcon } from "lucide-react";
+import { LanguageToggle } from "../LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslations } from "@/lib/translations";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const { language } = useLanguage();
+  const t = useTranslations(language);
+  const links = getLinks(t);
   const [activeSection, setActiveSection] = useState<string>("");
 
   // Función para scroll suave personalizada (más compatible)
@@ -29,8 +34,8 @@ const Navbar = () => {
 
   // Detectar sección activa usando Intersection Observer mejorado
   useEffect(() => {
-    const sectionIds = links.map(link => link.href.replace("#", ""));
-    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+    const sectionIds = links.map((link: any) => link.href.replace("#", ""));
+    const sections = sectionIds.map((id: any) => document.getElementById(id)).filter(Boolean);
 
     if (sections.length === 0) return;
 
@@ -63,25 +68,25 @@ const Navbar = () => {
       }
     );
 
-    sections.forEach((section) => {
+    sections.forEach((section: any) => {
       if (section) {
         observer.observe(section);
       }
     });
 
     return () => {
-      sections.forEach((section) => {
+      sections.forEach((section: any) => {
         if (section) {
           observer.unobserve(section);
         }
       });
     };
-  }, []);
+  }, [links]);
 
   return (
-    <nav className="z-50 sticky top-2 w-[97%] lg:top-5 rounded-xl lg:rounded-full border bg-background/30 backdrop-blur-xl flex justify-between items-center pl-4 px-2 py-2 lg:w-full lg:max-w-4xl mx-auto">
-      <div className="flex items-center gap-4">
-        {links.map((link) => {
+    <nav className="z-50 sticky top-2 w-[97%] lg:top-5 rounded-xl lg:rounded-full border bg-background/30 backdrop-blur-xl flex justify-between items-center pl-4 px-2 py-2 lg:w-full lg:max-w-4xl max-sm:hidden mx-auto">
+      <div className="flex items-center gap-4 max-sm:hidden">
+        {links.map((link: any) => {
           const isActive = activeSection === link.href;
           return (
             <a
@@ -105,8 +110,9 @@ const Navbar = () => {
           href="#contact"
           className="lg:block hidden px-4 py-1 cursor-pointer rounded-full border border-orange-400 bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent"
         >
-          Let's talk
+          {t.nav.letsTalk}
         </a>
+        <LanguageToggle />
         <ThemeToggle />
       </div>
     </nav>
