@@ -15,7 +15,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-dvh w-full mx-auto flex lg:items-start justify-center flex-col gap-10 bg-gray-50/5 backdrop-blur-sm"
+      className="min-h-dvh w-full mx-auto flex lg:items-start justify-center flex-col gap-10"
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-10">
       <h2 className="title">{t.skills.title}</h2>

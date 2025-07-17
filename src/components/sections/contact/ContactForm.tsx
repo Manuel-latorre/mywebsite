@@ -131,7 +131,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="max-sm:pb-20 min-h-dvh w-full mx-auto flex lg:items-start justify-center flex-col gap-10 max-lg:px-4 bg-gray-50/5 backdrop-blur-sm"
+      className="pb-20 min-h-dvh w-full mx-auto flex lg:items-start justify-center flex-col gap-10 max-lg:px-4"
     >
       <div className="text-center mb-6 lg:mb-12 w-full">
         <motion.h2

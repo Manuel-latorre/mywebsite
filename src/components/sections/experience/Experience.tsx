@@ -198,7 +198,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="min-h-dvh w-full flex items-center justify-center px-4 bg-gray-50/5 backdrop-blur-sm"
+      className="min-h-dvh w-full flex items-center justify-center px-4"
     >
       <Timeline data={experienceData} />
     </section>
