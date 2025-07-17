@@ -7,6 +7,7 @@ import ContactForm from "./components/sections/contact/ContactForm";
 import { Toaster } from "@/components/ui/sonner";
 import Mobilenav from "./components/navbar/Mobilenav";
 import { BackgroundLines } from "./components/ui/background-lines";
+import Footer from "./components/sections/footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Experience />
           <Skills />
           <ContactForm />
+          <Footer />
         </BackgroundLines>
       </LanguageProvider>
     </ThemeProvider>
