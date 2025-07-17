@@ -1,7 +1,12 @@
 import { cn } from '@/lib/utils'
 import { ArrowRight } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { useTranslations } from '@/lib/translations'
 
 const ContactButton = () => {
+    const { language } = useLanguage();
+    const t = useTranslations(language);
+
     return (
             <a href="#contact"
                 className={cn(
@@ -17,7 +22,7 @@ const ContactButton = () => {
                 )}
             >
                 <span className="text-sm font-medium text-zinc-900 dark:text-white transition-colors duration-300 group-hover/start:text-orange-600 dark:group-hover/start:text-orange-400">
-                    Contact me
+                    {t.contact.contactMe}
                 </span>
                 <div className="relative group/icon">
                     <div
