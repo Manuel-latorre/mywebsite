@@ -79,7 +79,7 @@ const Presentation = () => {
           >
             {t.presentation.frontendDeveloper.split(" ")[0]}{" "}
             <motion.span
-              className="bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent"
+              className="textgradient"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -197,7 +197,7 @@ const Presentation = () => {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <motion.span
-                className="bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent text-xl"
+                className="textgradient text-xl"
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1.3 }}
@@ -205,7 +205,7 @@ const Presentation = () => {
                 {t.presentation.lets}
               </motion.span>
               <motion.span
-                className="ml-8 bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent text-xl"
+                className="ml-8 textgradient text-xl"
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1.4 }}
@@ -213,7 +213,7 @@ const Presentation = () => {
                 {t.presentation.bringIt}
               </motion.span>
               <motion.span
-                className="ml-20 bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent text-xl"
+                className="ml-20 textgradient text-xl"
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1.5 }}
