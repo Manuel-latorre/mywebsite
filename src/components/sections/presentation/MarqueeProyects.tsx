@@ -1,29 +1,35 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslations } from "@/lib/translations";
 import diarc from '../../../assets/diarc.svg'
 import tualo from '../../../assets/tualo.svg'
 import yacobian from '../../../assets/yacobian.svg'
 
-const reviews = [
-  {
-    name: "Diarc Studio",
-    username: "@diarcstudio",
-    body: "I developed their SPA and content manager with NextJs.",
-    img: diarc,
-  },
-  {
-    name: "Tualo",
-    username: "@tualomx",
-    body: "Work as a fullstack developer remotely for a year.",
-    img: tualo,
-  },
-  {
-    name: "Yacobian",
-    username: "@yacobian.es",
-    body: "I developed their Website and content manager with NextJs.",
-    img: yacobian,
-  }
-];
+const MarqueeDemo = () => {
+  const { language } = useLanguage();
+  const t = useTranslations(language);
+
+  const reviews = [
+    {
+      name: "Diarc Studio",
+      username: "@diarcstudio",
+      body: t.marquee.diarcDescription,
+      img: diarc,
+    },
+    {
+      name: "Tualo",
+      username: "@tualomx",
+      body: t.marquee.tualoDescription,
+      img: tualo,
+    },
+    {
+      name: "Yacobian",
+      username: "@yacobian.es",
+      body: t.marquee.yacobianDescription,
+      img: yacobian,
+    }
+  ];
 
 
 const ReviewCard = ({
@@ -61,7 +67,6 @@ const ReviewCard = ({
   );
 };
 
-export default function MarqueeDemo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:20s]">
@@ -74,4 +79,6 @@ export default function MarqueeDemo() {
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
     </div>
   );
-}
+};
+
+export default MarqueeDemo;
