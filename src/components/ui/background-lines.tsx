@@ -23,6 +23,7 @@ export const BackgroundLines = ({
       <div className="fixed inset-0 w-full h-full z-0">
         <SVG svgOptions={svgOptions} />
       </div>
+      <div className="fixed inset-0 w-full h-full z-5 bg-gray-50/5 backdrop-blur-sm"></div>
       <div className="relative z-10">
         {children}
       </div>
