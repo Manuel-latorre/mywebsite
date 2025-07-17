@@ -1,6 +1,3 @@
-import { getLinks } from "@/lib/utils";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { useTranslations } from "@/lib/translations";
 import { useState, useEffect } from "react";
 import { BrainIcon, BriefcaseBusinessIcon, HouseIcon, MailIcon } from "lucide-react";
 import DropdownSettings from "./DropdownSettings";
@@ -25,7 +22,6 @@ const mobileLinks = [
 ]
 
 const Mobilenav = () => {
-  const { language } = useLanguage();
   const links = mobileLinks;
   const [activeSection, setActiveSection] = useState<string>("");
 
