@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import {
-  Send,
   Mail,
   User,
   MessageSquare,
@@ -9,6 +8,8 @@ import {
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslations } from "@/lib/translations";
 import { toast } from "sonner"
 
 interface FormData {
@@ -26,6 +27,8 @@ interface FormErrors {
 type FormStatus = "idle" | "loading";
 
 const ContactForm = () => {
+  const { language } = useLanguage();
+  const t = useTranslations(language);
   const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<FormData>({
     user_name: "",
@@ -43,19 +46,19 @@ const ContactForm = () => {
     const newErrors: FormErrors = {};
 
     if (!formData.user_name.trim()) {
-      newErrors.user_name = "El nombre es requerido";
+      newErrors.user_name = t.contact.form.errors.nameRequired;
     }
 
     if (!formData.user_email.trim()) {
-      newErrors.user_email = "El email es requerido";
+      newErrors.user_email = t.contact.form.errors.emailRequired;
     } else if (!/\S+@\S+\.\S+/.test(formData.user_email)) {
-      newErrors.user_email = "El email no es válido";
+      newErrors.user_email = t.contact.form.errors.emailInvalid;
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "El mensaje es requerido";
+      newErrors.message = t.contact.form.errors.messageRequired;
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "El mensaje debe tener al menos 10 caracteres";
+      newErrors.message = t.contact.form.errors.messageMinLength;
     }
 
     setErrors(newErrors);
@@ -89,8 +92,8 @@ const ContactForm = () => {
 
     // Verificar que las variables de entorno estén configuradas
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      toast.error("EmailJS no está configurado", {
-        description: "Verifica tus variables de entorno."
+      toast.error(t.contact.form.configError.title, {
+        description: t.contact.form.configError.description
       });
       return;
     }
@@ -100,8 +103,8 @@ const ContactForm = () => {
     try {
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY);
 
-      toast.success("¡Mensaje enviado exitosamente!", {
-        description: "Te responderé pronto. Gracias por contactarme."
+      toast.success(t.contact.form.success.title, {
+        description: t.contact.form.success.description
       });
 
       setFormData({
@@ -113,8 +116,8 @@ const ContactForm = () => {
       setStatus("idle");
     } catch (error) {
       console.error("Error sending email:", error);
-      toast.error("Error al enviar el mensaje", {
-        description: "Por favor, inténtalo de nuevo o contáctame directamente."
+      toast.error(t.contact.form.error.title, {
+        description: t.contact.form.error.description
       });
       setStatus("idle");
     }
@@ -124,19 +127,20 @@ const ContactForm = () => {
 
   return (
     <motion.div
+      id="contact"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="lg:min-h-dvh w-full max-w-7xl mx-auto flex lg:items-start justify-center flex-col gap-10 max-lg:px-4"
+      className="max-sm:pb-20 min-h-dvh w-full mx-auto flex lg:items-start justify-center flex-col gap-10 max-lg:px-4 bg-gray-50/5 backdrop-blur-sm"
     >
       <div className="text-center mb-6 lg:mb-12 w-full">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-6xl mb-2"
+          className="title mb-2"
         >
-          Contact
+          {t.contact.title}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -144,7 +148,7 @@ const ContactForm = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl text-foreground/60"
         >
-          Let's talk! Send me a message and I'll get back to you soon.
+          {t.contact.subtitle}
         </motion.p>
       </div>
 
@@ -165,7 +169,7 @@ const ContactForm = () => {
             className="text-sm font-medium text-foreground flex items-center gap-2"
           >
             <User className="w-4 h-4" />
-            Nombre
+            {t.contact.form.name}
           </label>
           <div className="relative">
             <input
@@ -184,7 +188,7 @@ const ContactForm = () => {
                   ? "border-red-500 focus:ring-red-500/20 focus:border-red-500"
                   : "border-border"
               )}
-              placeholder="Tu nombre"
+              placeholder={t.contact.form.namePlaceholder}
             />
           </div>
           {errors.user_name && (
@@ -205,7 +209,7 @@ const ContactForm = () => {
             className="text-sm font-medium text-foreground flex items-center gap-2"
           >
             <Mail className="w-4 h-4" />
-            Email
+            {t.contact.form.email}
           </label>
           <div className="relative">
             <input
@@ -224,7 +228,7 @@ const ContactForm = () => {
                   ? "border-red-500 focus:ring-red-500/20 focus:border-red-500"
                   : "border-border"
               )}
-              placeholder="tu@email.com"
+              placeholder={t.contact.form.emailPlaceholder}
             />
           </div>
           {errors.user_email && (
@@ -245,7 +249,7 @@ const ContactForm = () => {
             className="text-sm font-medium text-foreground flex items-center gap-2"
           >
             <MessageSquare className="w-4 h-4" />
-            Mensaje
+            {t.contact.form.message}
           </label>
           <div className="relative">
             <textarea
@@ -264,7 +268,7 @@ const ContactForm = () => {
                   ? "border-red-500 focus:ring-red-500/20 focus:border-red-500"
                   : "border-border"
               )}
-              placeholder="Hola Manuel, ¿cómo estás?, me interesa ..."
+              placeholder={t.contact.form.messagePlaceholder}
             />
           </div>
           {errors.message && (
@@ -298,10 +302,10 @@ const ContactForm = () => {
           {status === "loading" ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              Sending...
+              {t.contact.form.sending}
             </>
           ) : (
-            <>Send message</>
+            <>{t.contact.form.sendMessage}</>
           )}
         </motion.button>
       </motion.form>
