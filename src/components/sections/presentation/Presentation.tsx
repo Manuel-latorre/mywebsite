@@ -49,7 +49,7 @@ const Presentation = () => {
   return (
     <motion.div
       id="aboutme"
-      className="flex items-center w-full max-xl:px-6 mx-auto lg:justify-between min-h-dvh bg-gray-50/5 backdrop-blur-sm"
+      className="flex items-center w-full max-xl:px-6 mx-auto lg:justify-between min-h-dvh"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
