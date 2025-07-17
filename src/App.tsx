@@ -1,34 +1,34 @@
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import Navbar from "./components/navbar/Navbar";
 import Presentation from "./components/sections/presentation/Presentation";
-import { BackgroundLines } from "./components/ui/background-lines";
 import Experience from "./components/sections/experience/Experience";
 import Skills from "./components/sections/skills/Skills";
 import ContactForm from "./components/sections/contact/ContactForm";
 import { Toaster } from "@/components/ui/sonner"
+import Mobilenav from "./components/navbar/Mobilenav";
+import { BackgroundLines } from "./components/ui/background-lines";
 
 function App() {
   return (
     <ThemeProvider>
-      <Toaster />
-      <BackgroundLines>
-        <div className="min-h-dvh w-full bg-background text-foreground transition-colors duration-300">
-          <Navbar />
+      <LanguageProvider>
+        <Toaster />
+        
 
-          <Presentation />
+        <BackgroundLines>
+       
+            <Navbar />
+            <Mobilenav />
 
-          <Experience/>
+            <Presentation />
 
-          <Skills />
+            <Experience/>
 
-          <section
-            id="contact"
-            className="min-h-dvh w-full flex items-center justify-center"
-          >
+            <Skills />
             <ContactForm />
-          </section>
-        </div>
-      </BackgroundLines>
+        </BackgroundLines>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }
