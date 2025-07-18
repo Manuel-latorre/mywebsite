@@ -23,7 +23,7 @@ export default function SocialButton({
         },
      
         { 
-            icon: <LinkedInIcon width={24} height={24}/>, 
+            icon: <LinkedInIcon width={24} height={24} fill="#fff"/>, 
             label: "LinkedIn", 
             href: "https://www.linkedin.com/in/manuel-latorre-frontend-developer/",
             color: "bg-zinc-800",

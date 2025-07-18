@@ -1,16 +1,25 @@
-import Avatar from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 import { Timeline } from "@/components/ui/timeline";
-import { igz, igzl, martin, martinl } from "@/lib/utils";
+import { igzl, martinl } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
+import Avatar from "@/components/ui/avatar";
 import tualo from "../../../assets/tualo.svg";
 import yacobian from "../../../assets/yacobian.svg";
 import diarc from "../../../assets/diarc.svg";
 import ReactQuery from "@/components/icons/ReactQueryIcon";
 import ZustandIcon from "@/components/icons/ZustandIcon";
-
-import { Link } from "react-router-dom";
 import OpenAiIcon from "@/components/icons/OpenAiIcon";
+import TailwindCSS from "@/components/icons/TailwindIcon";
+import Nextjs from "@/components/icons/NextIcon";
+import HTML5 from "@/components/icons/HTMLIcon";
+import CSS from "@/components/icons/CSSIcon";
+import TypeScript from "@/components/icons/TypescriptIcon";
+import Supabase from "@/components/icons/SupabaseIcon";
+import ReactIcon from "@/components/icons/ReactIcon";
+import MongoDB from "@/components/icons/Mongoose";
+import igz from "../../../assets/igz.png";
+import ma from "../../../assets/ma.png";
 
 const Experience = () => {
   const { language } = useLanguage();
@@ -34,7 +43,7 @@ const Experience = () => {
                 />
                 <div className="-translate-x-2">
                   <Avatar
-                    url={martin}
+                    url={ma}
                     name="Martín Alturria"
                     role={t.experience.backendDeveloper}
                     linkedin={martinl}
@@ -54,18 +63,16 @@ const Experience = () => {
           </p>
           <ul className="text-neutral-700 dark:text-neutral-300 space-y-2 mb-4 max-sm:text-sm">
             <p className="font-medium">{t.experience.keyContributions}</p>
-            <li>
-              {t.experience.contributions.contract}
-            </li>
-            <li>
-              {t.experience.contributions.reactQuery}
-            </li>
-            <li>
-              {t.experience.contributions.dashboards}
-            </li>
+            <li>{t.experience.contributions.contract}</li>
+            <li>{t.experience.contributions.reactQuery}</li>
+            <li>{t.experience.contributions.dashboards}</li>
           </ul>
           <div className="flex flex-wrap items-center gap-2">
-            <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,typescript,react" />
+          <HTML5 width={37} height={37} />
+            <CSS width={37} height={37} />
+            <TailwindCSS width={37} height={37} />
+            <TypeScript width={37} height={37} />
+            <ReactIcon width={37} height={37} />
             <ReactQuery width={37} height={37} />
             <ZustandIcon width={37} height={37} />
           </div>
@@ -77,7 +84,11 @@ const Experience = () => {
       content: (
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <img src={yacobian} alt="Yacobian" className="w-8 h-8 max-xl:hidden" />
+            <img
+              src={yacobian}
+              alt="Yacobian"
+              className="w-8 h-8 max-xl:hidden"
+            />
             <div className="max-sm:text-xl text-3xl text-neutral-800 dark:text-neutral-200 flex gap-2 max-xl:flex-col">
               <div className="flex items-center gap-2">
                 <Link to="https://yacobian.es/" target="_blank">
@@ -96,15 +107,16 @@ const Experience = () => {
           </p>
           <ul className="text-neutral-700 dark:text-neutral-300 space-y-2 mb-4 max-sm:text-sm">
             <p className="font-medium">{t.experience.keyContributions}</p>
-            <li>
-              {t.experience.contributions.yacobian1}
-            </li>
-            <li>
-              {t.experience.contributions.yacobian2}
-            </li>
+            <li>{t.experience.contributions.yacobian1}</li>
+            <li>{t.experience.contributions.yacobian2}</li>
           </ul>
           <div className="flex  flex-wrap items-center gap-2">
-            <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,typescript,nextjs,supabase" />
+            <HTML5 width={37} height={37} />
+            <CSS width={37} height={37} />
+            <TailwindCSS width={37} height={37} />
+            <TypeScript width={37} height={37} />
+            <Nextjs width={37} height={37} />
+            <Supabase width={37} height={37} />
           </div>
         </div>
       ),
@@ -130,21 +142,18 @@ const Experience = () => {
           </p>
           <ul className="text-neutral-700 dark:text-neutral-300 space-y-2 mb-4 max-sm:text-sm">
             <p className="font-medium">{t.experience.keyContributions}</p>
-            <li>
-              {t.experience.contributions.tualoLed}
-            </li>
-            <li>
-              {t.experience.contributions.tualoAI}
-            </li>
-            <li>
-              {t.experience.contributions.tualoIntegration}
-            </li>
-            <li>
-              {t.experience.contributions.tualoCharts}
-            </li>
+            <li>{t.experience.contributions.tualoLed}</li>
+            <li>{t.experience.contributions.tualoAI}</li>
+            <li>{t.experience.contributions.tualoIntegration}</li>
+            <li>{t.experience.contributions.tualoCharts}</li>
           </ul>
           <div className="flex flex-wrap items-center gap-2">
-            <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,typescript,nextjs,supabase" />
+            <HTML5 width={37} height={37} />
+            <CSS width={37} height={37} />
+            <TailwindCSS width={37} height={37} />
+            <TypeScript width={37} height={37} />
+            <Nextjs width={37} height={37} />
+            <Supabase width={37} height={37} />
             <OpenAiIcon width={37} height={37} />
           </div>
         </div>
@@ -171,24 +180,19 @@ const Experience = () => {
           </p>
           <ul className="text-neutral-700 dark:text-neutral-300 space-y-2 mb-4 max-sm:text-sm">
             <p className="font-medium">{t.experience.keyContributions}</p>
-            <li>
-              {t.experience.contributions.diarcFigma}
-            </li>
-            <li>
-              {t.experience.contributions.diarcArchitecture}
-            </li>
-            <li>
-              {t.experience.contributions.diarcAnimations}
-            </li>
-            <li>
-              {t.experience.contributions.diarcAdmin}
-            </li>
-            <li>
-              {t.experience.contributions.diarcSEO}
-            </li>
+            <li>{t.experience.contributions.diarcFigma}</li>
+            <li>{t.experience.contributions.diarcArchitecture}</li>
+            <li>{t.experience.contributions.diarcAnimations}</li>
+            <li>{t.experience.contributions.diarcAdmin}</li>
+            <li>{t.experience.contributions.diarcSEO}</li>
           </ul>
           <div className="flex flex-wrap items-center gap-2">
-            <img src="https://skillicons.dev/icons?i=html,css,tailwindcss,typescript,nextjs,supabase" />
+            <HTML5 width={37} height={37} />
+            <CSS width={37} height={37} />
+            <TailwindCSS width={37} height={37} />
+            <TypeScript width={37} height={37} />
+            <Nextjs width={37} height={37} />
+            <MongoDB width={37} height={37} />
           </div>
         </div>
       ),

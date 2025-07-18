@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 
 const Supabase = (props: SVGProps<SVGSVGElement>) => (
+  <div className="p-1.5 rounded-xl bg-[#242938]">
   <svg
     viewBox="0 0 109 113"
     fill="none"
@@ -47,5 +48,6 @@ const Supabase = (props: SVGProps<SVGSVGElement>) => (
       </linearGradient>
     </defs>
   </svg>
+  </div>
 );
 export default Supabase;

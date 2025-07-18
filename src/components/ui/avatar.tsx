@@ -2,6 +2,7 @@ import {  Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import LinkedInIcon from "../icons/LinkedinIcon";
 
 const Avatar = ({
   url,
@@ -23,10 +24,7 @@ const Avatar = ({
         <TooltipContent className="flex flex-col items-center justify-center gap-2">
           <p>{role}</p>
           <a className="flex items-center gap-1 pb-1" href={linkedin} target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://skillicons.dev/icons?i=linkedin"
-              className="w-4 h-4"
-            />
+            <LinkedInIcon width={16} height={16} fill="#0A66C2" />
             {name}
           </a>
         </TooltipContent>

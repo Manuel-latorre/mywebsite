@@ -55,7 +55,7 @@ export default function Footer() {
               className="text-gray-400 hover:text-white"
               aria-label="LinkedIn"
             >
-              <LinkedInIcon className="h-5 w-5" />
+              <LinkedInIcon className="h-5 w-5" fill="#fff" />
             </Link>
           </div>
         </div>

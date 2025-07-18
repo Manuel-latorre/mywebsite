@@ -1,5 +1,6 @@
 import type { SVGProps } from "react";
 const HTML5 = (props: SVGProps<SVGSVGElement>) => (
+  <div className="p-1.5 rounded-xl bg-[#EF652A]">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 452 520"
@@ -18,5 +19,6 @@ const HTML5 = (props: SVGProps<SVGSVGElement>) => (
       d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z"
     />
   </svg>
+  </div>
 );
 export default HTML5;

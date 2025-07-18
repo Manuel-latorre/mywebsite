@@ -15,6 +15,12 @@ import ContactButton from "@/components/buttons/ContactButton";
 import MarqueeDemo from "./MarqueeProyects";
 import Ripple from "@/components/ui/ripple";
 import ResumeButton from "@/components/buttons/ResumeButton";
+import React from "@/components/icons/ReactIcon";
+import Nextjs from "@/components/icons/NextIcon";
+import TailwindCSS from "@/components/icons/TailwindIcon";
+import TypeScript from "@/components/icons/TypescriptIcon";
+import HTML5 from "@/components/icons/HTMLIcon";
+import CSS from "@/components/icons/CSSIcon";
 
 const Presentation = () => {
   const { language } = useLanguage();
@@ -22,27 +28,27 @@ const Presentation = () => {
   const mainStack = [
     {
       name: "React",
-      icon: <img src="https://skillicons.dev/icons?i=react" />,
+      icon: <React width={37} height={37}/>,
     },
     {
       name: "Next.js",
-      icon: <img src="https://skillicons.dev/icons?i=nextjs" />,
+      icon: <Nextjs width={37} height={37}/>,
     },
     {
       name: "Tailwind CSS",
-      icon: <img src="https://skillicons.dev/icons?i=tailwindcss" />,
+      icon: <TailwindCSS width={37} height={37}/>,
     },
     {
       name: "TypeScript",
-      icon: <img src="https://skillicons.dev/icons?i=typescript" />,
+      icon: <TypeScript width={37} height={37}/>,
     },
     {
       name: "HTML",
-      icon: <img src="https://skillicons.dev/icons?i=html" />,
+      icon: <HTML5 width={37} height={37}/>,
     },
     {
       name: "CSS",
-      icon: <img src="https://skillicons.dev/icons?i=css" />,
+      icon: <CSS width={37} height={37}/>,
     },
   ];
 
