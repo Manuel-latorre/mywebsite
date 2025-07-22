@@ -2,7 +2,7 @@ import {  Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import LinkedInIcon from "../icons/LinkedinIcon";
+import LinkedInIcon from "@/components/icons/LinkedinIcon";
 
 const Avatar = ({
   url,

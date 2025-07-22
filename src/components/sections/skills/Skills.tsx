@@ -1,4 +1,5 @@
-import ClaudeAI from "@/components/icons/ClaudeIcon";import CSS from "@/components/icons/CSSIcon";
+import ClaudeAI from "@/components/icons/ClaudeIcon";
+import CSS from "@/components/icons/CSSIcon";
 import Cursor from "@/components/icons/CursorIcon";
 import Framer from "@/components/icons/FramerMotion";
 import HTML5 from "@/components/icons/HTMLIcon";

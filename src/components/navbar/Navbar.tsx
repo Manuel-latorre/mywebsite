@@ -1,6 +1,6 @@
 import { getLinks } from "@/lib/utils";
-import { ThemeToggle } from "../ThemeToggle";
-import { LanguageToggle } from "../LanguageToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
 import { useState, useEffect } from "react";

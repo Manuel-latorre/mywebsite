@@ -9,10 +9,10 @@ import {
 } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
-import perfil from "../../../assets/perfil-profesional.jpg";
-import SocialButton from "../../buttons/SocialButton";
+import perfil from "@/assets/perfil-profesional.jpg";
+import SocialButton from "@/components/buttons/SocialButton";
 import ContactButton from "@/components/buttons/ContactButton";
-import MarqueeDemo from "./MarqueeProyects";
+import MarqueeDemo from "@/components/sections/presentation/MarqueeProyects";
 import Ripple from "@/components/ui/ripple";
 import ResumeButton from "@/components/buttons/ResumeButton";
 import React from "@/components/icons/ReactIcon";

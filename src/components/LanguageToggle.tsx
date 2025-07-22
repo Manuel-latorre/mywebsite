@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import { useLanguage } from "../contexts/LanguageContext"
+import { useLanguage } from "@/contexts/LanguageContext"
 import { LanguagesIcon } from "lucide-react"
 
 export const LanguageToggle = () => {

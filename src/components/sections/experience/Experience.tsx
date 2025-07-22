@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Timeline } from "@/components/ui/timeline";
-import { igzl, martinl } from "@/lib/utils";
+import { igz, martinl } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
 import Avatar from "@/components/ui/avatar";
-import tualo from "../../../assets/tualo.svg";
-import yacobian from "../../../assets/yacobian.svg";
-import diarc from "../../../assets/diarc.svg";
+import tualo from "@/assets/tualo.svg";
+import yacobian from "@/assets/yacobian.svg";
+import diarc from "@/assets/diarc.svg";
 import ReactQuery from "@/components/icons/ReactQueryIcon";
 import ZustandIcon from "@/components/icons/ZustandIcon";
 import OpenAiIcon from "@/components/icons/OpenAiIcon";
@@ -18,8 +18,8 @@ import TypeScript from "@/components/icons/TypescriptIcon";
 import Supabase from "@/components/icons/SupabaseIcon";
 import ReactIcon from "@/components/icons/ReactIcon";
 import MongoDB from "@/components/icons/Mongoose";
-import igz from "../../../assets/igz.png";
-import ma from "../../../assets/ma.png";
+import igzn from "@/assets/igz.png";
+import ma from "@/assets/ma.png";
 
 const Experience = () => {
   const { language } = useLanguage();
@@ -36,10 +36,10 @@ const Experience = () => {
               </h4>
               <div className="flex items-center">
                 <Avatar
-                  url={igz}
+                  url={igzn}
                   name="Ignacio Zanotto"
                   role={t.experience.projectManager}
-                  linkedin={igzl}
+                  linkedin={igz}
                 />
                 <div className="-translate-x-2">
                   <Avatar

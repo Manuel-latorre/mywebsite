@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrainIcon, BriefcaseBusinessIcon, HouseIcon, MailIcon } from "lucide-react";
-import DropdownSettings from "./DropdownSettings";
+import DropdownSettings from "@/components/navbar/DropdownSettings";
 
 const mobileLinks = [
   {

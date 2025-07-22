@@ -4,9 +4,9 @@ import {  DropdownMenu,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ThemeToggle } from "../ThemeToggle";
-import { LanguageToggle } from "../LanguageToggle";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { SettingsIcon } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const DropdownSettings = () => {
   return (
