@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import React, { type JSX } from "react";
 import Ripple from "@/components/ui/ripple";
 
 interface Technology {
@@ -32,17 +32,21 @@ export default function CardExperience({
   responsibilities,
   technologies,
   className = "",
-  projects
+  projects,
 }: CardExperienceProps) {
   return (
-    <div className={`border p-4 rounded-2xl bg-gray/10 backdrop-blur-sm ${className}`}>
+    <div
+      className={`border p-4 rounded-2xl bg-gray/10 backdrop-blur-sm ${className}`}
+    >
       <div className="flex items-center gap-3 my-2 justify-between max-sm:flex-col-reverse max-sm:items-start">
         <div className="max-sm:text-xl text-3xl text-neutral-800 dark:text-neutral-200 flex gap-2 max-lg:flex-col">
           {company.logo && (
-            <img 
-              src={company.logo} 
-              alt={company.logoAlt || company.name} 
-              className="w-8 h-8 max-lg:hidden" 
+            <img
+              loading="lazy"
+              decoding="async"
+              src={company.logo}
+              alt={company.logoAlt || company.name}
+              className="w-8 h-8 max-lg:hidden"
             />
           )}
           <span>{company.name}</span>
@@ -58,15 +62,13 @@ export default function CardExperience({
           </span>
         </div>
       </div>
-      
-      <span className="textgradient text-2xl">
-        {role}
-      </span>
-      
+
+      <span className="textgradient text-2xl">{role}</span>
+
       <p className="max-sm:text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-4">
         {description}
       </p>
-      
+
       <ul className="text-neutral-700 dark:text-neutral-300 space-y-3 mb-4 max-sm:text-sm">
         {responsibilities.map((item: string, idx: number) => (
           <li key={idx}>{item}</li>
@@ -74,19 +76,17 @@ export default function CardExperience({
       </ul>
 
       {projects && (
-        <div className="flex flex-wrap items-center gap-2">
-          {projects}
-        </div>
+        <div className="flex flex-wrap items-center gap-2">{projects}</div>
       )}
-      
+
       <div className="flex flex-wrap items-center gap-2">
         {technologies.map((tech, idx) => {
           const IconComponent = tech.icon;
           return (
-            <IconComponent 
+            <IconComponent
               key={idx}
-              width={tech.width || 37} 
-              height={tech.height || 37} 
+              width={tech.width || 37}
+              height={tech.height || 37}
             />
           );
         })}

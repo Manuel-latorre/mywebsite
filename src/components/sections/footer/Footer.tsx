@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-gray-300 border-t ">
+    <footer className=" border-t ">
       <div className="flex items-start justify-around py-12 max-sm:flex-col max-sm:items-start max-sm:justify-start max-sm:gap-12 max-sm:px-6">
         {/* Columna 1: Información de la Empresa y Redes Sociales */}
         <div className="space-y-4">

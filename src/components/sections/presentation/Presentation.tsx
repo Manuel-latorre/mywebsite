@@ -167,6 +167,8 @@ const Presentation = () => {
             transition={{ duration: 0.6, delay: 1 }}
           >
             <img
+              loading="lazy"
+              decoding="async"
               src={perfil || "/placeholder.svg"}
               alt="Manuel Latorre"
               className="rounded-2xl w-full h-full object-cover"

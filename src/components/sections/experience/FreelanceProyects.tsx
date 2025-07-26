@@ -1,59 +1,64 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-import { useLanguage } from "@/contexts/LanguageContext"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
 
-  const proyects = [
-    {
-      name: "Yacobian",
-      logo: "/yacobian.svg",
-      link: "https://yacobian.es/",
-    },
-    {
-      name: "Diarc Studio",
-      logo: "/diarc.svg",
-      link: "https://diarc-studio.vercel.app/",
-    },
-    {
-      name: "BDI",
-      logo: "/bdi.svg",
-      link: "https://bdistand.narvaez.com.ar/",
-    },
-    {
-      name: "Vittanut",
-      logo: "/vittanut.svg",
-      link: "https://www.vittanut.com/",
-    },
-    
-    
-  ]
+const proyects = [
+  {
+    name: "Yacobian",
+    logo: "/yacobian.svg",
+    link: "https://yacobian.es/",
+  },
+  {
+    name: "Diarc Studio",
+    logo: "/diarc.svg",
+    link: "https://diarc-studio.vercel.app/",
+  },
+  {
+    name: "BDI",
+    logo: "/bdi.svg",
+    link: "https://bdistand.narvaez.com.ar/",
+  },
+  {
+    name: "Vittanut",
+    logo: "/vittanut.svg",
+    link: "https://www.vittanut.com/",
+  },
+];
 
-  export default function FreelanceProyects() {
-
-    const { language } = useLanguage();
+export default function FreelanceProyects() {
+  const { language } = useLanguage();
   const t = useTranslations(language);
 
-    return (
-        <DropdownMenu>
+  return (
+    <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="mb-4 cursor-pointer" variant="outline">{t.freelanceProyects.viewSomeProyects}</Button>
+        <Button className="mb-4 cursor-pointer" variant="outline">
+          {t.freelanceProyects.viewSomeProyects}
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="start">
         {proyects.map((proyect) => (
           <DropdownMenuItem key={proyect.name}>
-            <img src={proyect.logo} alt={proyect.name} />
-            <a href={proyect.link} target="_blank" rel="noopener noreferrer">{proyect.name}</a>
+            <img
+              loading="lazy"
+              decoding="async"
+              src={proyect.logo}
+              alt={proyect.name}
+            />
+            <a href={proyect.link} target="_blank" rel="noopener noreferrer">
+              {proyect.name}
+            </a>
           </DropdownMenuItem>
         ))}
         <DropdownMenuSeparator />
-       
       </DropdownMenuContent>
     </DropdownMenu>
-    )
-  }
+  );
+}
