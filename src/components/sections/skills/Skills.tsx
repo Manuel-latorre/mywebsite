@@ -23,6 +23,9 @@ import Vitest from "@/components/icons/VitestIcon";
 import Git from "@/components/icons/GitIcon";
 import Docker from "@/components/icons/DockerIcon";
 import Vercel from "@/components/icons/VercelIcon";
+import Vite from "@/components/icons/ViteIcon";
+import NestJS from "@/components/icons/NestJsIcon";
+import MongoDB from "@/components/icons/Mongoose";
 
 const Skills = () => {
   const { language } = useLanguage();
@@ -42,14 +45,17 @@ const Skills = () => {
           <TypeScript width={37} height={37}/>
           <JavaScript width={37} height={37}/>
           <React width={37} height={37}/>
+          <ReactQuery width={37} height={37} />
+          <Vite width={37} height={37} />
+          <Vitest width={37} height={37} />
           <Nextjs width={37} height={37}/>
           <Nodejs width={37} height={37}/>
           <Expressjs width={37} height={37}/>
+          <NestJS width={37} height={37}/>
           <PostgreSQL width={37} height={37}/>
+          <MongoDB width={37} height={37}/>
           <Supabase width={37} height={37}/>
-          <ReactQuery width={37} height={37} />
           <ZustandIcon width={37} height={37} />
-          <Vitest width={37} height={37} />
           <Git width={37} height={37} />
           <Docker width={37} height={37} />
           <Vercel width={37} height={37} />
