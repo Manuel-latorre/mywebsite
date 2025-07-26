@@ -10,6 +10,11 @@ export const translations = {
       contact: "Contact",
       letsTalk: "Let's talk"
     },
+
+    // Freelance Proyects
+    freelanceProyects: {
+      viewSomeProyects: "View some proyects"
+    },
     
     // Presentation Section
     presentation: {
@@ -27,36 +32,51 @@ export const translations = {
     // Experience Section
     experience: {
       title: "Experience",
-      freelancerTeam: "Freelancer team",
+      freelancerTeam: "Freelance Team",
+      freelancerTeamCountry: "Argentina",
+      modality: "Remote",
       frontendDeveloper: "Frontend Developer",
       fullstackDeveloper: "Fullstack Developer",
-      projectManager: "Project Manager",
-      backendDeveloper: "Backend Developer",
       keyContributions: "Key contributions",
       freelancer: "- Freelancer",
-      realEstateDescription: "End-to-end frontend development for a real estate management platform",
-      realEstateCompany: "Real estate company based in Spain – corporate website and custom admin panel",
-      fintechDescription: "Fintech startup based in Mexico – financial management platform",
-      diarcDescription: "3D Art Outsourcing Studio specializing in Immersive Experiences, Metaverses, and Gaming – Single Page Application + Admin Panel",
-      contributions: {
-        contract: "Developed a 4-step contract creation flow with Zustand for state management, React Hook Form + Zod for robust validation, and protected routes based on user roles.",
-        reactQuery: "Built complex user flows using React Query with optimistic UI updates, improving responsiveness and user experience.",
-        dashboards: "Designed and implemented interactive dashboards with Recharts, persistent filters by date and currency, and date range validation with global state handling.",
-        responsive: "Built fully responsive layouts with Tailwind CSS, ensuring seamless experiences across all devices.",
-        animations: "Enhanced user experience with smooth animations using Framer Motion, including custom transitions and micro-interactions.",
-        performance: "Optimized performance through code splitting, lazy loading, and efficient state management patterns.",
-        yacobian1: "Built a responsive, mobile-first website based on Figma designs, ensuring performance and pixel-perfect implementation.",
-        yacobian2: "Developed a custom admin dashboard with full CRUD capabilities, enabling non-technical users to manage site content autonomously.",
-        tualoLed: "Led front-end development and contributed to full-stack tasks over a 1-year period, ensuring maintainability and performance across the platform.",
-        tualoAI: "Financial report automation using AI agents (OpenAI API), achieving an 80% reduction in manual tasks and increased operational efficiency.",
-        tualoIntegration: "Integrated Trigger.dev for scheduled workflows and RESEND for reliable transactional email delivery.",
-        tualoCharts: "Built dynamic, user-friendly charts from Excel inputs using Recharts, enhancing data visualization and reporting.",
-        diarcFigma: "Translated detailed Figma designs into a pixel-perfect, responsive Single Page Application using Next.js and Tailwind CSS.",
-        diarcArchitecture: "Built a scalable component-based architecture with reusable UI elements and consistent design tokens.",
-        diarcAnimations: "Implemented custom animations, scroll effects and responsive behaviors for an immersive user experience across devices.",
-        diarcAdmin: "Developed a lightweight admin interface for content management, maintaining visual consistency with the public site.",
-        diarcSEO: "Applied technical SEO best practices (semantic HTML, accessibility, performance optimization) for enhanced visibility."
-      }
+      freelanceTeamDescription: "I work as a front-end developer contributing to the creation of products such as CMS platforms, websites, and control panels for global clients.",
+      freelanceTeamPeriod: "March 2025 – Current",
+      freelanceTeamResponsibilities: [
+        "Develop interfaces following Atomic Design principles to ensure consistency and scalability.",
+        "Collaborate closely with the Design team by translating Figma designs into high-quality, responsive code.",
+        "Delivered several CRUD platforms applying SOLID principles to ensure scalability, maintainability, and excellent performance.",
+        "Achieved significant improvements and several manual tasks were reduced for customers through these solutions."
+      ],
+      tualoCompany: "Tualo",
+      tualoCountry: "Mexico",
+      tualoRole: "Fullstack Developer",
+      tualoPeriod: "April 2024 – Feb 2025",
+      tualoDescription: "As a full-stack developer at Tualo, I contributed to the development of the dashboard responsible for managing the financial data of the clients' companies.",
+      tualoResponsibilities: [
+        "Led the frontend development, focusing on integrating report automation, implementing interactive data visualizations, and creating the user interface for clients to access their monthly financial reports.",
+        "Developed dynamic charts using Recharts based on uploaded Excel files and integrated OpenAI API for automated report generation, along with building the user dashboard for report access.",
+        "Reduced manual reporting tasks by 80%, leading to a significant improvement in operational efficiency and enhanced data-driven decision-making for clients."
+      ],
+      tuMejorAmigoCompany: "Tu Mejor Amigo",
+      tuMejorAmigoCountry: "Mexico",
+      tuMejorAmigoRole: "Frontend Developer",
+      tuMejorAmigoPeriod: "Nov 2023 – March 2024",
+      tuMejorAmigoDescription: "As a Frontend Developer at Tu Mejor Amigo, I was responsible for crafting intuitive and engaging user interfaces.",
+      tuMejorAmigoResponsibilities: [
+        "I implemented core functionalities for data management using standard API methods and ensured seamless interaction with the application's database.",
+        "Delivered a fluid and responsive user experience, significantly improving data management and application performance."
+      ],
+      yacobian1: "Built a responsive, mobile-first website based on Figma designs, ensuring performance and pixel-perfect implementation.",
+      yacobian2: "Developed a custom admin dashboard with full CRUD capabilities, enabling non-technical users to manage site content autonomously.",
+      tualoLed: "Led front-end development and contributed to full-stack tasks over a 1-year period, ensuring maintainability and performance across the platform.",
+      tualoAI: "Financial report automation using AI agents (OpenAI API), achieving an 80% reduction in manual tasks and increased operational efficiency.",
+      tualoIntegration: "Integrated Trigger.dev for scheduled workflows and RESEND for reliable transactional email delivery.",
+      tualoCharts: "Built dynamic, user-friendly charts from Excel inputs using Recharts, enhancing data visualization and reporting.",
+      diarcFigma: "Translated detailed Figma designs into a pixel-perfect, responsive Single Page Application using Next.js and Tailwind CSS.",
+      diarcArchitecture: "Built a scalable component-based architecture with reusable UI elements and consistent design tokens.",
+      diarcAnimations: "Implemented custom animations, scroll effects and responsive behaviors for an immersive user experience across devices.",
+      diarcAdmin: "Developed a lightweight admin interface for content management, maintaining visual consistency with the public site.",
+      diarcSEO: "Applied technical SEO best practices (semantic HTML, accessibility, performance optimization) for enhanced visibility."
     },
     
     // Skills Section
@@ -147,6 +167,12 @@ export const translations = {
       contact: "Contacto",
       letsTalk: "Hablemos"
     },
+
+    // Freelance Proyects
+    freelanceProyects: {
+      viewSomeProyects: "Ver algunos proyectos"
+    },
+    
     
     // Presentation Section
     presentation: {
@@ -164,36 +190,53 @@ export const translations = {
     // Experience Section
     experience: {
       title: "Experiencia",
-      freelancerTeam: "Equipo freelancer",
+      freelancerTeam: "Freelance Team",
+      freelancerTeamCountry: "Argentina",
+      modality: "Remoto",
       frontendDeveloper: "Desarrollador Frontend",
       fullstackDeveloper: "Desarrollador Fullstack",
       projectManager: "Proyect Manager",
       backendDeveloper: "Desarrollador Backend",
       keyContributions: "Contribuciones clave",
       freelancer: "- Freelancer",
-      realEstateDescription: "Desarrollo frontend integral para una plataforma de gestión inmobiliaria",
-      realEstateCompany: "Empresa inmobiliaria con sede en España – sitio web corporativo y panel de administración personalizado",
-      fintechDescription: "Startup fintech con sede en México – plataforma de gestión financiera",
-      diarcDescription: "Estudio de Arte 3D especializado en Experiencias Inmersivas, Metaversos y Gaming – Aplicación de Página Única + Panel de Administración",
-      contributions: {
-        contract: "Desarrollé un flujo de creación de contratos de 4 pasos con Zustand para gestión de estado, React Hook Form + Zod para validación robusta, y rutas protegidas basadas en roles de usuario.",
-        reactQuery: "Construí flujos de usuario complejos usando React Query con actualizaciones de UI optimistas, mejorando la capacidad de respuesta y experiencia del usuario.",
-        dashboards: "Diseñé e implementé dashboards interactivos con Recharts, filtros persistentes por fecha y moneda, y validación de rangos de fecha con manejo de estado global.",
-        responsive: "Construí layouts completamente responsivos con Tailwind CSS, asegurando experiencias fluidas en todos los dispositivos.",
-        animations: "Mejoré la experiencia del usuario con animaciones suaves usando Framer Motion, incluyendo transiciones personalizadas y micro-interacciones.",
-        performance: "Optimicé el rendimiento a través de división de código, carga diferida y patrones eficientes de gestión de estado.",
-        yacobian1: "Construí un sitio web responsivo y mobile-first basado en diseños de Figma, asegurando rendimiento e implementación pixel-perfect.",
-        yacobian2: "Desarrollé un panel de administración personalizado con capacidades CRUD completas, permitiendo a usuarios no técnicos gestionar el contenido del sitio de forma autónoma.",
-        tualoLed: "Lideré el desarrollo frontend y contribuí a tareas full-stack durante un período de 1 año, asegurando mantenibilidad y rendimiento en toda la plataforma.",
-        tualoAI: "Automatización de reportes financieros con agentes de IA (OpenAI API), logrando una reducción del 80% en tareas manuales y mayor eficiencia operativa.",
-        tualoIntegration: "Integré Trigger.dev para flujos de trabajo programados y RESEND para entrega confiable de emails transaccionales.",
-        tualoCharts: "Construí gráficos dinámicos y fáciles de usar a partir de inputs de Excel usando Recharts, mejorando la visualización de datos y reportes.",
-        diarcFigma: "Traduje diseños detallados de Figma en una Aplicación de Página Única pixel-perfect y responsiva usando Next.js y Tailwind CSS.",
-        diarcArchitecture: "Construí una arquitectura escalable basada en componentes con elementos UI reutilizables y tokens de diseño consistentes.",
-        diarcAnimations: "Implementé animaciones personalizadas, efectos de scroll y comportamientos responsivos para una experiencia de usuario inmersiva en todos los dispositivos.",
-        diarcAdmin: "Desarrollé una interfaz de administración ligera para gestión de contenido, manteniendo consistencia visual con el sitio público.",
-        diarcSEO: "Apliqué mejores prácticas de SEO técnico (HTML semántico, accesibilidad, optimización de rendimiento) para mayor visibilidad."
-      }
+      freelanceTeamDescription: "Trabajo como desarrollador frontend contribuyendo a la creación de productos como plataformas CMS, sitios web y paneles de control para clientes globales.",
+      freelanceTeamPeriod: "Marzo 2025 – Actual",
+      freelanceTeamResponsibilities: [
+        "Desarrollo interfaces siguiendo principios de Atomic Design para garantizar consistencia y escalabilidad.",
+        "Colaboro estrechamente con el equipo de Diseño traduciendo diseños de Figma en código de alta calidad y responsivo.",
+        "Entregué varias plataformas CRUD aplicando principios SOLID para asegurar escalabilidad, mantenibilidad y excelente rendimiento.",
+        "Se lograron mejoras significativas y se redujeron varias tareas manuales para los clientes a través de estas soluciones."
+      ],
+      tualoCompany: "Tualo",
+      tualoCountry: "Mexico",
+      tualoRole: "Desarrollador Fullstack",
+      tualoPeriod: "Abril 2024 – Feb 2025",
+      tualoDescription: "Como desarrollador fullstack en Tualo, contribuí al desarrollo del dashboard encargado de gestionar los datos financieros de las empresas clientes.",
+      tualoResponsibilities: [
+        "Lideré el desarrollo frontend, enfocándome en la integración de automatización de reportes, implementación de visualizaciones de datos interactivas y creación de la interfaz para que los clientes accedan a sus reportes financieros mensuales.",
+        "Desarrollé gráficos dinámicos usando Recharts a partir de archivos Excel subidos e integré la API de OpenAI para la generación automatizada de reportes, además de construir el dashboard de usuario para el acceso a reportes.",
+        "Reduje las tareas manuales de reportes en un 80%, logrando una mejora significativa en la eficiencia operativa y una mejor toma de decisiones basada en datos para los clientes."
+      ],
+      tuMejorAmigoCompany: "Tu Mejor Amigo",
+      tuMejorAmigoCountry: "Mexico",
+      tuMejorAmigoRole: "Desarrollador Frontend",
+      tuMejorAmigoPeriod: "Nov 2023 – Marzo 2024",
+      tuMejorAmigoDescription: "Como Desarrollador Frontend en Tu Mejor Amigo, fui responsable de crear interfaces de usuario intuitivas y atractivas.",
+      tuMejorAmigoResponsibilities: [
+        "Implementé funcionalidades principales para la gestión de datos usando métodos estándar de API y aseguré una interacción fluida con la base de datos de la aplicación.",
+        "Entregué una experiencia de usuario fluida y responsiva, mejorando significativamente la gestión de datos y el rendimiento de la aplicación."
+      ],
+      yacobian1: "Construí un sitio web responsivo y mobile-first basado en diseños de Figma, asegurando rendimiento e implementación pixel-perfect.",
+      yacobian2: "Desarrollé un panel de administración personalizado con capacidades CRUD completas, permitiendo a usuarios no técnicos gestionar el contenido del sitio de forma autónoma.",
+      tualoLed: "Lideré el desarrollo frontend y contribuí a tareas full-stack durante un período de 1 año, asegurando mantenibilidad y rendimiento en toda la plataforma.",
+      tualoAI: "Automatización de reportes financieros con agentes de IA (OpenAI API), logrando una reducción del 80% en tareas manuales y mayor eficiencia operativa.",
+      tualoIntegration: "Integré Trigger.dev para flujos de trabajo programados y RESEND para entrega confiable de emails transaccionales.",
+      tualoCharts: "Construí gráficos dinámicos y fáciles de usar a partir de inputs de Excel usando Recharts, mejorando la visualización de datos y reportes.",
+      diarcFigma: "Traduje diseños detallados de Figma en una Aplicación de Página Única pixel-perfect y responsiva usando Next.js y Tailwind CSS.",
+      diarcArchitecture: "Construí una arquitectura escalable basada en componentes con elementos UI reutilizables y tokens de diseño consistentes.",
+      diarcAnimations: "Implementé animaciones personalizadas, efectos de scroll y comportamientos responsivos para una experiencia de usuario inmersiva en todos los dispositivos.",
+      diarcAdmin: "Desarrollé una interfaz de administración ligera para gestión de contenido, manteniendo consistencia visual con el sitio público.",
+      diarcSEO: "Apliqué mejores prácticas de SEO técnico (HTML semántico, accesibilidad, optimización de rendimiento) para mayor visibilidad."
     },
     
     // Skills Section
