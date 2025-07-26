@@ -6,7 +6,7 @@ import Skills from "./components/sections/skills/Skills";
 import ContactForm from "./components/sections/contact/ContactForm";
 import { Toaster } from "@/components/ui/sonner";
 import Mobilenav from "./components/navbar/Mobilenav";
-import { BackgroundLines } from "./components/ui/background-lines";
+//import { BackgroundLines } from "./components/ui/background-lines";
 import Footer from "./components/sections/footer/Footer";
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
     <ThemeProvider>
       <LanguageProvider>
         <Toaster />
-        <BackgroundLines>
+        {/* <BackgroundLines>
+        </BackgroundLines> */}
           <Navbar />
           <Mobilenav />
           <Presentation />
@@ -22,7 +23,6 @@ function App() {
           <Skills />
           <ContactForm />
           <Footer />
-        </BackgroundLines>
       </LanguageProvider>
     </ThemeProvider>
   );
