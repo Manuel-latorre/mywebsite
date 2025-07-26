@@ -4,9 +4,9 @@ import { igz, martinl } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
 import Avatar from "@/components/ui/avatar";
-import tualo from "@/assets/tualo.svg";
-import yacobian from "@/assets/yacobian.svg";
-import diarc from "@/assets/diarc.svg";
+import tualo from "/tualo.svg";
+import yacobian from "/yacobian.svg";
+import diarc from "/diarc.svg";
 import ReactQuery from "@/components/icons/ReactQueryIcon";
 import ZustandIcon from "@/components/icons/ZustandIcon";
 import OpenAiIcon from "@/components/icons/OpenAiIcon";
@@ -18,8 +18,8 @@ import TypeScript from "@/components/icons/TypescriptIcon";
 import Supabase from "@/components/icons/SupabaseIcon";
 import ReactIcon from "@/components/icons/ReactIcon";
 import MongoDB from "@/components/icons/Mongoose";
-import igzn from "@/assets/igz.png";
-import ma from "@/assets/ma.png";
+import igzn from "/igz.png";
+import ma from "/ma.png";
 
 const Experience = () => {
   const { language } = useLanguage();
