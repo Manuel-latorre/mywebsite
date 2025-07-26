@@ -133,3 +133,7 @@ html {
 .textgradient{
   @apply bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401] bg-clip-text text-transparent;
 }
+
+.bggradient{
+  @apply bg-gradient-to-r from-[#C75305] via-[#FE9400] to-[#E34401];
+}
