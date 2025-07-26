@@ -6,10 +6,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 
-export const igz = "https://www.linkedin.com/in/igzt/"
-export const martinl = "https://www.linkedin.com/in/martin-alturria/"
-
-
 export const getLinks = (t: any) => [
     {
         name: t.nav.aboutMe,
