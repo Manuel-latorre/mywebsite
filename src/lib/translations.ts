@@ -15,23 +15,34 @@ export const translations = {
     freelanceProyects: {
       viewSomeProyects: "View some proyects"
     },
-    
+
     // Presentation Section
     presentation: {
-        frontendDeveloper: "Frontend Developer",
-        description:
-          "I build modern and functional web applications, turning concepts into high-impact digital products.\n\nI have 2 years of frontend experience, working with both startups and freelance projects, where I apply best practices in UI/UX design, performance optimization, and scalable architecture. I stay continuously updated with new technologies to deliver efficient and sustainable solutions.",
-        currentStatus: "Currently studying Systems Engineering.",
-        myExperience: "My experience",
-        lets: "Let's",
-        bringIt: "Bring it",
-        toLife: "To life",
-        resumeButton: "Check out my resume"
-      },
-    
+      frontendDeveloper: "Frontend Developer",
+      description:
+        "I build modern and functional web applications, turning concepts into high-impact digital products.\n\nI have 2 years of frontend experience, working with both startups and freelance projects, where I apply best practices in UI/UX design, performance optimization, and scalable architecture. I stay continuously updated with new technologies to deliver efficient and sustainable solutions.",
+      currentStatus: "Currently studying Systems Engineering.",
+      myExperience: "My experience",
+      lets: "Let's",
+      bringIt: "Bring it",
+      toLife: "To life",
+      resumeButton: "Check out my resume"
+    },
+
     // Experience Section
     experience: {
       title: "Experience",
+      favorcito: "Favorcito",
+      favorcitoCountry: "LATAM",
+      favorcitoRole: "Frontend Developer",
+      favorcitoPeriod: "August 2025 – Current",
+      favorcitoDescription: "Currently working as a Frontend Developer",
+      favorcitoResponsibilities: [
+        "Responsible for web development",
+        "Build and improve pages used by clients and students",
+        "Focus on fast loading, responsive design, and ease of use",
+        "Fix bugs and develop new features to grow the platform"
+      ],
       freelancerTeam: "Freelance Team",
       freelancerTeamCountry: "Argentina",
       modality: "Remote",
@@ -78,13 +89,15 @@ export const translations = {
       diarcAdmin: "Developed a lightweight admin interface for content management, maintaining visual consistency with the public site.",
       diarcSEO: "Applied technical SEO best practices (semantic HTML, accessibility, performance optimization) for enhanced visibility."
     },
-    
+
     // Skills Section
     skills: {
-      title: "Skills & Tools",
+      title: "Technologies & Tools",
+      developmentTools: "Development Tools",
+      aiTools: "AI Tools",
       // Soft Skills
       proactive: "proactive",
-      autodidact: "autodidact", 
+      autodidact: "autodidact",
       teamwork: "teamwork",
       problemSolving: "problem solving",
       communication: "communication",
@@ -94,15 +107,15 @@ export const translations = {
       collaboration: "collaboration",
       analyticalThinking: "analytical thinking"
     },
-    
+
     // Experience Dates
     dates: {
       may2025Current: "May 2025 - Current",
-      march2025: "March 2025", 
+      march2025: "March 2025",
       april2024Feb2025: "April 2024 - Feb 2025",
       april2024: "April 2024"
     },
-    
+
     // Marquee Projects
     marquee: {
       diarcDescription: "I developed their SPA and content manager with NextJs.",
@@ -110,7 +123,7 @@ export const translations = {
       yacobianDescription: "I developed their Website and content manager with NextJs.",
       favorcitoDescription: "Currently working as a Frontend Developer"
     },
-    
+
     // Contact Section
     contact: {
       title: "Contact",
@@ -146,7 +159,7 @@ export const translations = {
         }
       }
     },
-    
+
     // Timeline
     timeline: {
       experience: "Experience"
@@ -173,24 +186,35 @@ export const translations = {
     freelanceProyects: {
       viewSomeProyects: "Ver algunos proyectos"
     },
-    
-    
+
+
     // Presentation Section
     presentation: {
-        frontendDeveloper: "Desarrollador Frontend",
-        description:
-          "Desarrollo aplicaciones web modernas y funcionales, transformando conceptos en productos digitales de alto impacto.\n\nCuento con 2 años de experiencia en frontend, trabajando tanto en startups como en proyectos freelance, donde he aplicado buenas prácticas de diseño UI/UX, optimización de rendimiento y arquitectura escalable. Me mantengo en constante actualización tecnológica para ofrecer soluciones eficientes y sostenibles.",
-        currentStatus: "Actualmente estudiando Ingeniería en Sistemas.",
-        myExperience: "Mi experiencia",
-        lets: "Let's",
-        bringIt: "Bring it",
-        toLife: "To life",
-        resumeButton: "Echa un vistazo a mi CV"
-      },
-    
+      frontendDeveloper: "Desarrollador Frontend",
+      description:
+        "Desarrollo aplicaciones web modernas y funcionales, transformando conceptos en productos digitales de alto impacto.\n\nCuento con 2 años de experiencia en frontend, trabajando tanto en startups como en proyectos freelance, donde he aplicado buenas prácticas de diseño UI/UX, optimización de rendimiento y arquitectura escalable. Me mantengo en constante actualización tecnológica para ofrecer soluciones eficientes y sostenibles.",
+      currentStatus: "Actualmente estudiando Ingeniería en Sistemas.",
+      myExperience: "Mi experiencia",
+      lets: "Let's",
+      bringIt: "Bring it",
+      toLife: "To life",
+      resumeButton: "Echa un vistazo a mi CV"
+    },
+
     // Experience Section
     experience: {
       title: "Experiencia",
+      favorcito: "Favorcito",
+      favorcitoCountry: "LATAM",
+      favorcitoRole: "Desarrollador Frontend",
+      favorcitoPeriod: "Agosto 2025 – Actualidad",
+      favorcitoDescription: "Actualmente trabajando como Desarrollador Frontend",
+      favorcitoResponsibilities: [
+        "Encargado del desarrollo web",
+        "Crear y mejorar las páginas utilizadas por clientes y estudiantes",
+        "Enfocado en velocidad de carga, diseño responsivo y facilidad de uso",
+        "Resolver bugs y desarrollar nuevas funciones para el crecimiento de la plataforma"
+      ],
       freelancerTeam: "Freelance Team",
       freelancerTeamCountry: "Argentina",
       modality: "Remoto",
@@ -239,14 +263,17 @@ export const translations = {
       diarcAdmin: "Desarrollé una interfaz de administración ligera para gestión de contenido, manteniendo consistencia visual con el sitio público.",
       diarcSEO: "Apliqué mejores prácticas de SEO técnico (HTML semántico, accesibilidad, optimización de rendimiento) para mayor visibilidad."
     },
-    
+
     // Skills Section
     skills: {
-      title: "Habilidades y Herramientas",
+      title: "Tecnologías y Herramientas",
+      subtitle: "Tecnologías y herramientas que uso para dar vida a ideas",
+      developmentTools: "Herramientas de desarrollo",
+      aiTools: "Herramientas de IA",
       // Soft Skills
       proactive: "proactivo",
       autodidact: "autodidacta",
-      teamwork: "trabajo en equipo", 
+      teamwork: "trabajo en equipo",
       problemSolving: "resolución de problemas",
       communication: "comunicación",
       adaptability: "adaptabilidad",
@@ -255,15 +282,15 @@ export const translations = {
       collaboration: "colaboración",
       analyticalThinking: "pensamiento analítico"
     },
-    
+
     // Experience Dates
     dates: {
       may2025Current: "Mayo 2025 - Actual",
       march2025: "Marzo 2025",
-      april2024Feb2025: "Abril 2024 - Feb 2025", 
+      april2024Feb2025: "Abril 2024 - Feb 2025",
       april2024: "Abril 2024"
     },
-    
+
     // Marquee Projects
     marquee: {
       diarcDescription: "Desarrollé su sitio web y gestor de contenido con NextJs.",
@@ -271,7 +298,7 @@ export const translations = {
       yacobianDescription: "Desarrollé su sitio web y gestor de contenido con NextJs.",
       favorcitoDescription: "Actualmente trabajo como Desarrollador Frontend."
     },
-    
+
     // Contact Section
     contact: {
       title: "Contacto",
@@ -307,7 +334,7 @@ export const translations = {
         }
       }
     },
-    
+
     // Timeline
     timeline: {
       experience: "Experiencia"
