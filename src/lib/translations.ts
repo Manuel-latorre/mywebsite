@@ -107,7 +107,8 @@ export const translations = {
     marquee: {
       diarcDescription: "I developed their SPA and content manager with NextJs.",
       tualoDescription: "Work as a fullstack developer remotely for a year.",
-      yacobianDescription: "I developed their Website and content manager with NextJs."
+      yacobianDescription: "I developed their Website and content manager with NextJs.",
+      favorcitoDescription: "Currently working as a Frontend Developer"
     },
     
     // Contact Section
@@ -267,7 +268,8 @@ export const translations = {
     marquee: {
       diarcDescription: "Desarrollé su sitio web y gestor de contenido con NextJs.",
       tualoDescription: "Trabajé como desarrollador fullstack de forma remota durante un año.",
-      yacobianDescription: "Desarrollé su sitio web y gestor de contenido con NextJs."
+      yacobianDescription: "Desarrollé su sitio web y gestor de contenido con NextJs.",
+      favorcitoDescription: "Actualmente trabajo como Desarrollador Frontend."
     },
     
     // Contact Section
