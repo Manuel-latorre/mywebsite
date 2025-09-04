@@ -15,11 +15,39 @@ import CardExperience from "./CardExperience";
 import Vite from "@/components/icons/ViteIcon";
 import Vitest from "@/components/icons/VitestIcon";
 import FreelanceProyects from "./FreelanceProyects";
+import JavaScript from "@/components/icons/JsIcon";
 
 const Experience = () => {
   const { language } = useLanguage();
   const t = useTranslations(language);
   const experienceData = [
+    {
+      title: t.experience.favorcitoPeriod,
+      content: (
+        <CardExperience
+          company={{
+            name: t.experience.favorcito,
+            logo: "",
+            logoAlt: t.experience.favorcito,
+          }}
+          location={t.experience.favorcitoCountry}
+          modality={t.experience.modality}
+          role={t.experience.favorcitoRole}
+          description={t.experience.favorcitoDescription}
+          responsibilities={t.experience.favorcitoResponsibilities}
+          technologies={[
+            { icon: HTML5, width: 27, height: 27 },
+            { icon: CSS, width: 27, height: 27 },
+            { icon: TailwindCSS, width: 27, height: 27 },
+            { icon: TypeScript, width: 27, height: 27 },
+            { icon: JavaScript, width: 27, height: 27 },
+            { icon: Nextjs, width: 27, height: 27 },
+            { icon: ReactIcon, width: 27, height: 27 },
+            { icon: ZustandIcon, width: 27, height: 27 },
+          ]}
+        />
+      ),
+    },
     {
       title: t.experience.freelanceTeamPeriod,
       content: (
