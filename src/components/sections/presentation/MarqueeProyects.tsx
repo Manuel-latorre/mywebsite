@@ -5,6 +5,7 @@ import { useTranslations } from "@/lib/translations";
 import diarc from '/diarc.svg'
 import tualo from '/tualo.svg'
 import yacobian from '/yacobian.svg'
+import favorcitologo from '/favorcitologo.png'
 
 const MarqueeDemo = () => {
   const { language } = useLanguage();
@@ -28,6 +29,12 @@ const MarqueeDemo = () => {
       username: "@yacobian.es",
       body: t.marquee.yacobianDescription,
       img: yacobian,
+    },
+    {
+      name: "Favorcito",
+      username:"@tufavorcito.com",
+      body: t.marquee.favorcitoDescription,
+      img: favorcitologo
     }
   ];
 
@@ -54,7 +61,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img loading="lazy" decoding="async" width="32" height="32" alt="" src={img} />
+        <img loading="lazy" decoding="async" width="32" height="32" alt={name} src={img} className={`${name === "Favorcito" ? "rounded-lg" : ""}`}/>
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
