@@ -7,27 +7,28 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { bdi, diarc, vittanut, yacobian } from "@/lib/images";
 import { useTranslations } from "@/lib/translations";
 
 const proyects = [
   {
     name: "Yacobian",
-    logo: "/yacobian.svg",
+    logo: yacobian,
     link: "https://yacobian.es/",
   },
   {
     name: "Diarc Studio",
-    logo: "/diarc.svg",
+    logo: diarc,
     link: "https://diarc-studio.vercel.app/",
   },
   {
     name: "BDI",
-    logo: "/bdi.svg",
+    logo: bdi,
     link: "https://bdistand.narvaez.com.ar/",
   },
   {
     name: "Vittanut",
-    logo: "/vittanut.svg",
+    logo: vittanut,
     link: "https://www.vittanut.com/",
   },
 ];

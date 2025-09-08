@@ -2,10 +2,8 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
-import diarc from '/diarc.svg'
-import tualo from '/tualo.svg'
-import yacobian from '/yacobian.svg'
-import favorcitologo from '/favorcitologo.png'
+import { diarc, tualo, yacobian, favorcitologo } from "@/lib/images";
+
 
 const MarqueeDemo = () => {
   const { language } = useLanguage();

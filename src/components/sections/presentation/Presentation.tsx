@@ -9,7 +9,6 @@ import {
 } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslations } from "@/lib/translations";
-import perfil from "/perfil-profesional.jpg";
 import SocialButton from "@/components/buttons/SocialButton";
 import ContactButton from "@/components/buttons/ContactButton";
 import MarqueeDemo from "@/components/sections/presentation/MarqueeProyects";
@@ -21,6 +20,7 @@ import TailwindCSS from "@/components/icons/TailwindIcon";
 import TypeScript from "@/components/icons/TypescriptIcon";
 import HTML5 from "@/components/icons/HTMLIcon";
 import CSS from "@/components/icons/CSSIcon";
+import { perfil } from "@/lib/images";
 
 const Presentation = () => {
   const { language } = useLanguage();
@@ -169,7 +169,7 @@ const Presentation = () => {
             <img
               loading="lazy"
               decoding="async"
-              src={perfil || "/placeholder.svg"}
+              src={perfil}
               alt="Manuel Latorre"
               className="rounded-2xl w-full h-full object-cover"
             />
