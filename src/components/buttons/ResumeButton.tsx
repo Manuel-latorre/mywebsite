@@ -5,8 +5,8 @@ const ResumeButton = () => {
   const { language } = useLanguage();
 
   const resumeHref = language === "en" 
-    ? "/ManuelLatorre-Frontend.pdf" 
-    : "/Manuel-Latorre-Frontend.pdf";
+    ? "/manuel-latorre-fullstack.pdf" 
+    : "/fullstack-manuel-latorre.pdf";
 
   return (
     <a 

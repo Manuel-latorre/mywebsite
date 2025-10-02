@@ -18,9 +18,9 @@ export const translations = {
 
     // Presentation Section
     presentation: {
-      frontendDeveloper: "Frontend Developer",
+      frontendDeveloper: "Fullstack Developer",
       description:
-        "I build modern and functional web applications, turning concepts into high-impact digital products.\n\nI have 2 years of frontend experience, working with both startups and freelance projects, where I apply best practices in UI/UX design, performance optimization, and scalable architecture. I stay continuously updated with new technologies to deliver efficient and sustainable solutions.",
+        "Fullstack Developer with +2 years of experience in end-to-end development of scalable, high-performance applications for startups and freelance projects. Specialized in React, Next.js, TypeScript, and Node.js with a strong focus on performance optimization, responsive design, and intuitive user experiences.",
       currentStatus: "Currently studying Systems Engineering.",
       myExperience: "My experience",
       lets: "Let's",
@@ -46,7 +46,7 @@ export const translations = {
       freelancerTeam: "Freelance Team",
       freelancerTeamCountry: "Argentina",
       modality: "Remote",
-      frontendDeveloper: "Frontend Developer",
+      frontendDeveloper: "Fullstack Developer",
       fullstackDeveloper: "Fullstack Developer",
       keyContributions: "Key contributions",
       freelancer: "- Freelancer",
@@ -190,9 +190,9 @@ export const translations = {
 
     // Presentation Section
     presentation: {
-      frontendDeveloper: "Desarrollador Frontend",
+      frontendDeveloper: "Desarrollador Fullstack",
       description:
-        "Desarrollo aplicaciones web modernas y funcionales, transformando conceptos en productos digitales de alto impacto.\n\nCuento con 2 años de experiencia en frontend, trabajando tanto en startups como en proyectos freelance, donde he aplicado buenas prácticas de diseño UI/UX, optimización de rendimiento y arquitectura escalable. Me mantengo en constante actualización tecnológica para ofrecer soluciones eficientes y sostenibles.",
+        "Cuento con +2 años de experiencia en el desarrollo end-to-end de aplicaciones escalables y de alto rendimiento en startups y proyectos freelance. Especializado en React, Next.js, TypeScript y Node.js con un fuerte enfoque en optimización de rendimiento, diseño responsivo y experiencias de usuario intuitivas.",
       currentStatus: "Actualmente estudiando Ingeniería en Sistemas.",
       myExperience: "Mi experiencia",
       lets: "Let's",
@@ -218,7 +218,7 @@ export const translations = {
       freelancerTeam: "Freelance Team",
       freelancerTeamCountry: "Argentina",
       modality: "Remoto",
-      frontendDeveloper: "Desarrollador Frontend",
+      frontendDeveloper: "Desarrollador Fullstack",
       fullstackDeveloper: "Desarrollador Fullstack",
       projectManager: "Proyect Manager",
       backendDeveloper: "Desarrollador Backend",

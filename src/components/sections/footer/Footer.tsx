@@ -51,7 +51,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              to="https://www.linkedin.com/in/manuel-latorre-frontend-developer/"
+              to="https://www.linkedin.com/in/manuel-latorre-fullstack/"
               className="text-gray-400 hover:text-white"
               aria-label="LinkedIn"
             >

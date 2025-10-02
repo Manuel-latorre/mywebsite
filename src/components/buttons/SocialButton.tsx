@@ -25,7 +25,7 @@ export default function SocialButton({
         { 
             icon: <LinkedInIcon width={24} height={24} fill="#fff"/>, 
             label: "LinkedIn", 
-            href: "https://www.linkedin.com/in/manuel-latorre-frontend-developer/",
+            href: "https://www.linkedin.com/in/manuel-latorre-fullstack/",
             color: "bg-zinc-800",
             hoverColor: "group-hover:text-white "
         },
